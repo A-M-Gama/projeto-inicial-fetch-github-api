@@ -103,6 +103,12 @@ main {
   width: 50%;
 }
 
+.container .profile-data .info .data .socials{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
 .container .profile-data .info img{
   width: 50%;
   border-radius: 50%;
@@ -119,6 +125,10 @@ main {
   font-size: 15px;  
   font-weight: 400;
   line-height: 23px;
+}
+
+.container .profile-data .info .data .socials p:hover{
+  font-weight: bold;
 }
 
 /* REPOSITORIES */
