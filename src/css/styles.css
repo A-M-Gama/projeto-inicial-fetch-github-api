@@ -175,6 +175,7 @@ main {
 .container .profile-data .events .events-msgs a {
   font-weight: bold;
   width: 50%;
+  padding: 0 10px;
 }
 
 .container .profile-data .events .events-msgs a:hover {
@@ -184,6 +185,11 @@ main {
 
 .container .profile-data .events .events-msgs p {
   width: 50%;
+  padding: 0 10px;
+}
+
+.container .profile-data .events .events-msgs .msgnotfind {
+  color: #ddd;
 }
 
 

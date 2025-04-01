@@ -32,7 +32,7 @@ const screen = {
                 <li class="events-msgs">
                     <a href="https://github.com/${event.repo.name}" target="_blank">${event.repo.name}</a>
                     ${event.payload.commits?.[0]?.message ? 
-                        `<p>${event.payload.commits[0].message}</p>` : '<p>Não há mensagem de commit!</p>'}
+                        `<p>${event.payload.commits[0].message}</p>` : '<p class="msgnotfind">Não há mensagem de commit!</p>'}
                 </li>`;
         });
     
