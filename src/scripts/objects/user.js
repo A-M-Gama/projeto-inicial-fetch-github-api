@@ -13,12 +13,11 @@ const user = {
         this.userName = gitHubUser.login
         this.followers = gitHubUser.followers
         this.following = gitHubUser.following
-        console.log(gitHubUser)
+        // console.log(gitHubUser)
     },
     setRepositories(repositories){
         this.repositories = repositories
     }
-    
 }
 
 export { user }

@@ -162,6 +162,31 @@ main {
   display: none;
 }
 
+.container .profile-data .events .events-msgs{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  margin: 20px 0;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.container .profile-data .events .events-msgs a {
+  font-weight: bold;
+  width: 50%;
+}
+
+.container .profile-data .events .events-msgs a:hover {
+  color: hotpink;
+}
+
+
+.container .profile-data .events .events-msgs p {
+  width: 50%;
+}
+
+
 @media (max-width: 1280px) {
   .container {
     flex-direction: column;
