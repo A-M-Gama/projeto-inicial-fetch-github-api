@@ -9,7 +9,6 @@ document.getElementById('btn-search').addEventListener('click', () => {
 
     if(validateEmptyInput(userName)) return
     getUserData(userName)
-    
 })
 
 document.getElementById('input-search').addEventListener('keyup', (e) => {
@@ -37,7 +36,7 @@ async function getUserData(userName){
     user.setInfo(userResponse)
     user.setRepositories(repositoriesResponse)
     screen.renderUser(user)
-    screen.renderEvents(eventsResponse);
+    screen.renderEvents(eventsResponse)
 
     console.log(user)
 }

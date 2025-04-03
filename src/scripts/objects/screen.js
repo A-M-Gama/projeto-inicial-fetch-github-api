@@ -21,12 +21,11 @@ const screen = {
                                                     <ul>${repositoriesItens}</ul>
                                             </div>`
         }
-
     },
     renderEvents(events) {
         if(events.length === 0) return;
         let eventsItems = '';
-        //construcao de elementos
+
         events.slice(0, 10).forEach(event => {
             eventsItems += `
                 <li class="events-msgs">
@@ -36,7 +35,6 @@ const screen = {
                 </li>`;
         });
     
-        //apresentando os elementos na tela
         this.userProfile.innerHTML += `
             <div class="events section">
                 <h2>Eventos</h2>
