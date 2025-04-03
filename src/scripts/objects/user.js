@@ -16,8 +16,17 @@ const user = {
         // console.log(gitHubUser)
     },
     setRepositories(repositories){
-        this.repositories = repositories
+        this.repositories = repositories.map(repo => ({
+            name: repo.name,
+            watchers: repo.watchers_count,
+            stargazers: repo.stargazers_count,
+            forks: repo.forks_count,
+            language: repo.language || 'Linguagem não especificada'
+        }))
+        // console.log(user.repositories)
     }
+
 }
+
 
 export { user }

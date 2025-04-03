@@ -5,8 +5,8 @@ const events = {
             type: event.type,
             name: event.repo.name,
             url: `https://github.com/${event.repo.name}`,
-            comment: pushOrCreate(event)
-        }));
+            comment: pushOrCreate()
+        }))
     },
     getRecentEvents(limit = 10) {
         return this.allEvents.slice(0, limit);
@@ -14,9 +14,9 @@ const events = {
 }
 
 function pushOrCreate(event){
-    if(event.type === "CreateEvent"){
+    if(event === "CreateEvent"){
         return 'Sem mensagem de commit'
-    } else if (event.type === "PushEvent"){
+    } else if (event === "PushEvent"){
         return event.payload.commits?.[0]?.message || 'Sem mensagem';
     } else {
         return 'Descrição não disponível'

@@ -127,9 +127,9 @@ main {
   line-height: 23px;
 }
 
-.container .profile-data .info .data .socials p:hover{
+/* .container .profile-data .info .data .socials p:hover{
   font-weight: bold;
-}
+} */
 
 /* REPOSITORIES */
 
@@ -144,18 +144,39 @@ main {
   justify-content: center;
 }
 
-.container .profile-data .repositories ul li a{
+.container .profile-data .repositories ul li{
   padding: 20px;
   border: 1px solid grey;  
   margin: 20px;
   display: block;
   border-radius: 7px;
+  cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
-.container .profile-data .repositories ul li a:hover{
+.container .profile-data .repositories ul li:hover{
   background-color:hotpink;
-  color: #fff
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.container .profile-data .repositories ul li .repo-attributes{
+  display: flex;
+  gap: 5px;
+}
+
+.container .profile-data .repositories ul li .repo-attributes .attributes{
+  background-color: #6A5ACD;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  transition: 0.3s ;
+}
+.container .profile-data .repositories ul li .repo-attributes .attributes:hover{
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
 }
 
 .container .profile-data.hide{
@@ -180,6 +201,7 @@ main {
 
 .container .profile-data .events .events-msgs a:hover {
   color: hotpink;
+  transition: 0.2s ease-in-out;
 }
 
 

@@ -38,7 +38,7 @@ async function getUserData(userName){
     screen.renderUser(user)
     screen.renderEvents(eventsResponse)
 
-    console.log(user)
+    // console.log(user)
 }
 
 function validateEmptyInput(userName){
