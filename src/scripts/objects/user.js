@@ -25,8 +25,6 @@ const user = {
         }))
         // console.log(user.repositories)
     }
-
 }
-
 
 export { user }

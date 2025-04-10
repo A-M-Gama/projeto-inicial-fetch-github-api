@@ -1,26 +1,18 @@
-const events = {
-    allEvents: [],
-    setEvents(events) {
-        this.allEvents = events.map(event => ({
-            type: event.type,
-            name: event.repo.name,
-            url: `https://github.com/${event.repo.name}`,
-            comment: pushOrCreate()
-        }))
-    },
-    getRecentEvents(limit = 10) {
-        return this.allEvents.slice(0, limit);
-    }
-}
-
-function pushOrCreate(event){
-    if(event === "CreateEvent"){
-        return 'Sem mensagem de commit'
-    } else if (event === "PushEvent"){
-        return event.payload.commits?.[0]?.message || 'Sem mensagem';
+let eventsItens = ''
+user.events.forEach(element => {
+    if(element.type === 'PushEvent') {
+        eventsItens += `
+        <li>
+            <h3>${element.repo.name}</h3>
+            <p> -- ${element.payload.commits[0].message}</p>
+        </li>`
     } else {
-        return 'Descrição não disponível'
+        eventsItens += `
+        <li>
+            <h3>${element.repo.name}</h3>
+            <p> -- Criado um ${element.payload.ref_type}</p>
+        </li>`
     }
-}
+});
 
-export { events }
+export { eventsItens }
